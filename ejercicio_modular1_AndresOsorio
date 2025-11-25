@@ -1,0 +1,20 @@
+#************************************funciones**************************************
+ 
+def consultar_numero():
+    numero_random = int (input("Digite un numero cualquiera"))
+    return numero_random
+def verificar_el_numero(numero_random):
+    if numero_random > 0:
+        return "el numero es postivo"
+    elif numero_random < 0 :
+        return "el numero es negativo"
+    else:
+        return "el numero es neutral"
+def main():
+    x=consultar_numero()
+    resultado = verificar_el_numero(x)
+    return resultado
+#*******************************codigo****************************************
+mensaje=main()
+print(mensaje)
+ 
