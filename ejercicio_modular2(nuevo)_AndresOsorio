@@ -1,0 +1,30 @@
+#**********************************************el while¨************************************************¨********
+def capturar_letra():
+    letra =str(input())
+    return letra
+def dar_letra(letra):
+    if letra =='S' or letra == 's':
+        print("finalizo con exito. \n")
+        return False
+    else:
+        print("aun esta dentro del proceso")
+        return True
+    
+def mensaje():
+    print("el proceso ha terminado")
+
+#********************************************codigo principal***********************************************
+
+while True:
+
+    print("digite la letra 'A' para Actualisar Sistema")
+    print("digite la letra 'E' para Eliminar Catalogo")
+    print("digite la letra 'C' para Crear Productos")
+    print("digite la letra 'S' para salir del programa")
+
+    letra = capturar_letra()
+    seguir=dar_letra(letra)
+
+    if not seguir:
+        break
+mensaje()
