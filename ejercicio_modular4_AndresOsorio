@@ -1,38 +1,18 @@
-# 1. Función para solicitar la cantidad de números a sumar
-def pedir_cantidad():
-    while True:
-        try:
-            cantidad = int(input("Digite la cantidad de números para sumar: "))
-            if cantidad < 0:
-                print("La cantidad no puede ser negativa. Intente de nuevo.")
-            return cantidad
-        except ValueError:
-            print("Entrada no válida. Por favor, ingrese un número entero positivo.")
+#*************************************************cantidad de numeros**********************************************
+def cantidad_nuermos():
+    return int (input("digite la cantidad de numero que desea sumar: "))
 
+def suma_numeros(cantidad):
+    suma = 0
+    for i in range (cantidad):
+        print("digite el numero", i + 1, ":", end="")
+        numero = int(input())
+        suma = suma + numero
+    return suma
+def total(suma):
+    print("la sumatoria total es:", suma)
 
-def pedir_suma(suma_actual, indice):
- 
-    while True:
-        try:
- 
-            prompt = f"Digite el Número {indice}: "
-            numero = int(input(prompt))
-            
-
-            return suma_actual + numero
-        except ValueError:
-            print("Entrada no válida. Por favor, ingrese un número.")
-
-def mensaje():
-    cantidad_a_sumar=pedir_cantidad()
-    suma=0
-    if cantidad_a_sumar >0:
-     
-     for i in range (1, cantidad_a_sumar + 1):
-         suma= pedir_suma(suma, i)
-     print(f"\nla sumatoria total es:{suma}")
-    else:
-        print(f"\nNo se digitaron numero para sumar por lo tanto la suma es 0")
-
-#*******************************zona de codigo principal**********************************************************************************
-mensaje()
+#*************************************************zona de codigo*****************************************************
+cantidad = cantidad_nuermos()
+suma_total = suma_numeros(cantidad)
+total(suma_total)
