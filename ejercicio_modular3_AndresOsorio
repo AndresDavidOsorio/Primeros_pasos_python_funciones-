@@ -1,31 +1,27 @@
-# 1. Función para solicitar y retornar el número del usuario
-def solicitar_numero():
-   
-    while True:
-        try:
-            numero = int(input("Digite un número (si ingresa el 0 , se cierra el programa): "))
-            return numero
-        except ValueError:
-        
-            print("Entrada no válida. Por favor, ingrese un valor numérico.")
-def verificar_paridad(num):
-  
-    if num % 2 == 0:
-        print(f"El número {num} es PAR.")
+#***************************************************par o impar******************************************
+
+def pedir_numero():
+    numero_digitado= int(input("digite el numero a analizar"))
+    return numero_digitado
+
+def mirar_numero(numero):
+    if numero%2==0:
+        return "el numero es par"
     else:
-        print(f"El número {num} es IMPAR.")
+        "el numero es impar"
 
-def main():
+def enviar_mensaje (numero_digitado, numero):
+    mensaje= f"el numero: {numero_digitado}  en  {numero}"
+    return mensaje
 
-    num = 1
-    
-    print("******** CÓDIGO PRINCIPAL DE PYTHON ********")
-    while num != 0:
-        num = solicitar_numero()
-        
-        if num != 0:
-            verificar_paridad(num)
-    print("\nFinalizó el programa.")
+def imprimir_mensaje(mensaje):
+    print(mensaje)
 
-if __name__ == "__main__":
-    main()
+#**********************************************zona de codgio principal**********************************************
+numero=1;
+while numero!=0:
+    dato_numero= pedir_numero()
+    tipo_numero=mirar_numero(dato_numero)
+    dato_mensaje= enviar_mensaje (dato_numero, tipo_numero)
+    imprimir_mensaje(dato_mensaje)
+    print("finalizo el programa")
